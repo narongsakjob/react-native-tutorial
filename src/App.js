@@ -3,23 +3,18 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+	View,
+	Platform
 } from 'react-native';
 
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Hello World
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <View style={{ width: 50, height: 50, backgroundColor: "blue" }}/>
+        <View style={{ width: 50, height: 50, backgroundColor: "red" }}/>
+        <View style={{ width: 50, height: 50, backgroundColor: "green" }}/>
+        <View style={{ width: 50, height: 50, backgroundColor: "yellow" }}/>
       </View>
     );
   }
@@ -27,19 +22,8 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'lightblue',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+		backgroundColor: 'pink',
+		flex: 1,
+		paddingTop: Platform.OS === "ios" ? 25 : 0,
+  }
 });
