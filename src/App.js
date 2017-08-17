@@ -23,7 +23,9 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
 		backgroundColor: 'pink',
-		flex: 1,
+    flex: 1,
+    justifyContent: 'space-between',
+    flexDirection: 'row',
 		paddingTop: Platform.OS === "ios" ? 25 : 0,
   }
 });
