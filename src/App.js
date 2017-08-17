@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     flexDirection: 'row',
+    alignItems: 'center',
 		paddingTop: Platform.OS === "ios" ? 25 : 0,
   }
 });
