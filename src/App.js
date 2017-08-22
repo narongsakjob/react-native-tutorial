@@ -4,17 +4,20 @@ import {
   StyleSheet,
   Text,
 	View,
-	Platform
+  Platform,
+  Button,
 } from 'react-native';
 
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{ width: 50, height: 50, backgroundColor: "blue" }}/>
-        <View style={{ width: 50, height: 50, backgroundColor: "red" }}/>
-        <View style={{ width: 50, height: 50, backgroundColor: "green" }}/>
-        <View style={{ width: 50, height: 50, backgroundColor: "yellow" }}/>
+        <View style={styles.btn_bar}>
+          <Button title="title1"/>
+          <Button title="title2"/>
+          <Button title="title3"/>
+          <Button title="title4"/>          
+        </View>
       </View>
     );
   }
@@ -23,10 +26,18 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
 		backgroundColor: 'pink',
-    flex: 1,
     justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
+    flex: 1,
+    flexDirection: 'column',
 		paddingTop: Platform.OS === "ios" ? 25 : 0,
+  },
+  btn_bar: {
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+  row: {
+    flexDirection: 'row',
+
   }
 });
