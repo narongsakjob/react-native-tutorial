@@ -9,6 +9,14 @@ import {
 } from 'react-native';
 
 export default class App extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state= {
+      text: "No one press me"
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -18,6 +26,7 @@ export default class App extends Component {
           <Button title="title3"/>
           <Button title="title4"/>          
         </View>
+        <Text>55555</Text>
       </View>
     );
   }
